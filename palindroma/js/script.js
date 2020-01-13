@@ -1,8 +1,17 @@
 // Una funzione per capire se la parola è palindroma
-var str = prompt('inserisci una parola');
+var parolaUtente = prompt('inserisci una parola');
 
-function palindrome(str) {
-  return true;
+var parolaGirata = rovesciaParola(parolaUtente);
+
+if (parolaGirata==parolaUtente) {
+  console.log('palindroma');
+}else {
+  console.log('non palindroma');
 }
-palindrome("eye");
-console.log(str);
+function rovesciaParola(parola) {
+  var parolaReverse = '';
+  for (var i = parola.length -1; i >= 0; i--) {
+    parolaReverse += parola[i];
+  }
+  return parolaReverse;
+}
